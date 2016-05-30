@@ -1,0 +1,83 @@
+﻿.mage_message {
+    text-align:center;
+    font-size:15px;
+    padding:15px;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    z-index:9000;
+    display:none;
+}
+.mage_error {
+    background-color:#c9302c;
+    border-bottom:1px solid #ac2925;
+    color:#ffffff;
+}
+.mage_success {
+    background-color:#449d44;
+    border-bottom:1px solid #398439;
+    color:#ffffff;
+}
+
+.mage_modal {
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:100;
+    top:0px;
+    left:0px;
+    background-color:#000000;
+    filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+.mage_msg_box {
+    width:250px;
+    margin:0 auto;    
+    position:relative;
+    top:35%;
+    filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	-khtml-opacity: 1.0;
+	opacity: 1.0;
+}
+.mage_box_title {
+    font-weight:700;
+    font-size:12px;
+    border-bottom:1px solid #d4caca;
+    padding:8px;
+    color:#FFFFFF;
+    background-color:#204d74;
+    border-radius:4px 4px 0 0;
+}
+.mage_box_content {
+    font-size:12px;
+    padding:15px 10px;
+    border-left:1px solid #d4caca;
+    border-right:1px solid #d4caca;
+    background-color:#FFFFFF;
+}
+.mage_box_options {
+    border-top:1px solid #d4caca;
+    text-align:right;
+    padding:10px;
+    background-color:#d4caca;
+    border-radius:0 0 4px 4px;
+}
+.mage_box_options > a {
+    border-radius:4px;
+    padding:5px 15px;
+    font-size:12px;
+    border:1px solid #204d74;
+    text-decoration:none;
+    color:#000;
+}
+.mage_box_options > a:hover {
+    background-color:#204d74;
+    color:#FFFFFF;
+}
+.mage_box_options > a:first-child {
+    margin-right:25px;
+}

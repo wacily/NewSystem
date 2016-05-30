@@ -1,5 +1,56 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container
+    div(class="alert alert-success" role="alert")
+      b News List:
+      span
+        a(href='/manage/login', title='User Login') <span class='glyphicon glyphicon-user'></span>  Login
+    div.newlistbox
+      div.list-item.cf
+        div.list-head
+          span.list-head-title
+            <span class='glyphicon glyphicon-tasks'></span> 
+            a(href='https:www.baidu.com',target='_blank') News Title Anim pariatur cliche reprehenderit
+          span.list-head-date <span class='glyphicon glyphicon-calendar'></span> <b>Date:</b>2016-05-25
+          span.list-hean-source <span class='glyphicon glyphicon-eye-open'></span> <b>Source:</b>CapitalOnline.com
+        div.list-content.
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+      div.list-item.cf
+        div.list-head
+          span.list-head-title
+            <span class='glyphicon glyphicon-tasks'></span> 
+            a(href='https:www.baidu.com',target='_blank') News Title Anim pariatur cliche reprehenderit
+          span.list-head-date <span class='glyphicon glyphicon-calendar'></span> <b>Date:</b>2016-05-25
+          span.list-hean-source <span class='glyphicon glyphicon-eye-open'></span> <b>Source:</b>CapitalOnline.com
+        div.list-content.
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+      div.list-item.cf
+        div.list-head
+          span.list-head-title
+            <span class='glyphicon glyphicon-tasks'></span> 
+            a(href='https:www.baidu.com',target='_blank') News Title Anim pariatur cliche reprehenderit
+          span.list-head-date <span class='glyphicon glyphicon-calendar'></span> <b>Date:</b>2016-05-25
+          span.list-hean-source <span class='glyphicon glyphicon-eye-open'></span> <b>Source:</b>CapitalOnline.com
+        div.list-content.
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+
+    div.page-num-list
+      nav
+        ul.pagination
+          li
+            a(href='#',aria-label='Previous')
+              span(aria-hidden='true') &laquo;
+          li
+            a(href='#') 1
+          li
+            a(href='#') 2
+          li
+            a(href='#') 3
+          li
+            a(href='#') 4
+          li
+            a(href='#') 5
+          li
+            a(href='#',aria-label='Next')
+              span(aria-hidden='true') &raquo;

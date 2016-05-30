@@ -1,12 +1,33 @@
 extends ../layout.jade
 
+block static
+  script(src='/javascripts/login.js')
+
 block content
-  div.lgoinbox
-    div.loginbox-head User Login
-    div.loginbox-body.cf
-      div.col-sm-4.td-title Name:
-      div.col-sm-8.tr-content
-        input(type='text',id='txtUserName',name='userName')
-      div.col-sm-4.td-title Pwd:
-      div.col-sm-8.td.content
-        input(type='text',id='txtUserName',name='userName')
+  div.login-page
+    div.panel.panel-default.lgoinbox
+      div.panel-heading
+        h3.panel-title User Login
+      div.panel-body.loginbox-body
+        table
+          tbody
+            tr
+              th UserName :
+              td
+                input(type='text',id='txtUserName',name='userName',class='form-control txtUserName', placeholder='Input your name')
+            tr
+              th UserPwd :
+              td
+                input(type='password',id='txtUserPwd',name='userName',class='form-control txtUserPwd', placeholder='Input your password')
+
+          tfoot
+            tr
+              td(colspan='2',class='td-control')
+                input(type='button',class='btn btn-primary btnLogin',value='Login')
+                input(type='button',class='btn btn-primary btnCancel',value='Cancel')
+            tr
+              td(colspan='2', class='td-register cf')
+                span
+                  a(href='/manage/register') Register
+                span
+                  a(href='/manage/forget') Forget your password

@@ -1,10 +1,7 @@
 body {
-  padding: 50px;
+  padding: 0;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
 }
 .cf{zoom:1;}
 .cf:after{
@@ -14,23 +11,54 @@ a {
 	display: block;
 	clear:both;
 }
+.login-page{
+	background-color:#00cc66;
+	padding-top:120px; 
+}
 .lgoinbox{
-	margin:50px auto;
+	margin:0 auto;
 	width:400px;
 	height:300px;	
 }
-.loginbox-head{
-	padding:8px 15px;
-	font-size:16px;
-	font-weight:bold;
-	background-color: #666;
-	color:#fff;
-	border-top-left-radius: 4px;
-	border-top-right-radius:4px;
+.loginbox-body table{width:100%;}
+.loginbox-body table tr{height:50px;}
+.loginbox-body table tbody tr th{text-align:right;padding-right:5px;}
+.loginbox-body table tbody tr td{text-align:left; padding-right:30px;}
+.td-control{text-align:center !important; padding-top: 20px;}
+.td-control input{width:140px;}
+.td-control input:last-child{margin-left:20px;}
+.td-register{
+	padding:0 30px;
+	vertical-align: bottom;
+	font-weight: bold;
 }
-.loginbox-body{
-	padding:25px;
-	border-left:1px solid #666;
-	border-right:1px solid #666;
-	border-bottom:1px solid #666;
+.td-register span:first-child{
+	float:left;
+}
+.td-register span:last-child{
+	float:right;
+}
+
+
+.list-item{padding:8px;}
+.list-item span{display: inline-block;}
+.list-head-title{font-weight: bold; font-size:16px;}
+.list-hean-source{margin-right:50px; width:210px;}
+.list-hean-source,
+.list-head-date{float:right;}
+.list-content{
+	padding:16px 0 25px 0;
+	text-indent: 25px;
+	line-height: 25px;
+	border-bottom: 1px dotted #666;
+}
+.alert{
+	margin-top:15px;
+}
+.alert > span{
+	float:right;
+	font-weight: bold;
+}
+.alert a{
+	text-decoration: none;
 }
