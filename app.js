@@ -7,7 +7,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var login = require('./routes/login');  //user login page
+var mag_index = require('./routes/mag_index');  //manage index page
+ 
 var app = express();
 
 // view engine setup
@@ -23,6 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/manage/login', login);
+app.use('/manage/index',mag_index);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
@@ -55,5 +59,6 @@ app.use(function(err, req, res, next) {
     });
 });
 
+app.listen(3000);
 
 module.exports = app;
