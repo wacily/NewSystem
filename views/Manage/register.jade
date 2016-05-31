@@ -1,0 +1,52 @@
+extends ../layout.jade
+
+block static
+  script(src='/javascripts/register.js')
+
+block content
+  div.container.pages
+    div.panel.panel-default
+      div.panel-heading
+        h3.panel-title Register
+      div.panel-body
+        div.cf
+          div.pageleft
+          div.pageright.loginbox-body
+            table
+              tbody
+                tr
+                  th UserName : 
+                  td
+                    input(type='text',class='form-control txtUserName',placeholder='Input your user nane')
+                tr
+                  th UserPwd : 
+                  td
+                    input(type='password',class='form-control txtUserPwd',placeholder='Input your password')
+                tr
+                  th NickName : 
+                  td
+                    input(type='text',class='form-control txtNickName',placeholder='Input your nick name')
+                tr
+                  th Age : 
+                  td
+                    input(type='text',class='form-control txtAge',placeholder='Input your age')
+                tr
+                  th Sex : 
+                  td.inputRadio
+                    input(type='radio',name='userSex',class='rbtnSex', value='0', checked)
+                    span Weman
+                    input(type='radio',name='userSex',class='rbtnSex', value='1')
+                    span Man
+                tr
+                  th Phone : 
+                  td
+                    input(type='text',class='form-control txtPhone',placeholder='Input your phone')
+                tr
+                  th e-mail : 
+                  td
+                    input(type='text',class='form-control txtEmail',placeholder='Input your E-mail')
+              tfoot
+                tr
+                  td(colspan='2', class='td-control cf')
+                    input(type='button',class='btn btn-primary btnRegister',value='Register')
+                    input(type='button',class='btn btn-primary btnCancel',value='Cancel')
