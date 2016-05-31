@@ -1,5 +1,102 @@
 extends ../layout.jade
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container.pages
+    include head.jade
+
+    div.pages-body
+      table.table.table-bordered.datalist
+        thead
+          tr
+            th(style='width:50px;') 序号
+            th 标题
+            th(style='width:120px;') 发布日期
+            th(style='width:260px;') 操作
+        tbody
+          tr
+            td.td-num 1
+            td.td-title dfsfdgfdfgdf
+            td.td-date 2015-05-25
+            td.td-option
+              a(href="#")
+                <span class='glyphicon glyphicon-edit'></span> 编辑
+              a(href="#", class='link-del')
+                <span class='glyphicon glyphicon-remove'></span> 删除
+              a(href="#", class='link-nusend', title='点击取消发布')
+                <span class='glyphicon glyphicon-check'></span> 已发布
+          tr
+            td.td-num 2
+            td.td-title dfsfdgfdfgdf
+            td.td-date 2015-05-25
+            td.td-option
+              a(href="#")
+                <span class='glyphicon glyphicon-edit'></span> 编辑
+              a(href="#", class='link-del')
+                <span class='glyphicon glyphicon-remove'></span> 删除
+              a(href="#", class='link-nusend', title='点击取消发布')
+                <span class='glyphicon glyphicon-check'></span> 已发布
+          tr
+            td.td-num 3
+            td.td-title dfsfdgfdfgdf
+            td.td-date 2015-05-25
+            td.td-option
+              a(href="#")
+                <span class='glyphicon glyphicon-edit'></span> 编辑
+              a(href="#", class='link-del')
+                <span class='glyphicon glyphicon-remove'></span> 删除
+              a(href="#", class='link-send', title='点击发布')
+                <span class='glyphicon glyphicon-share'></span> 未发布
+      div
+        nav
+          ul.pagination
+            li
+              a(href='#',aria-label='Previous')
+                span(aria-hidden='true') &laquo;
+            li
+              a(href='#') 1
+            li
+              a(href='#') 2
+            li
+              a(href='#') 3
+            li
+              a(href='#') 4
+            li
+              a(href='#') 5
+            li
+              a(href='#',aria-label='Next')
+                span(aria-hidden='true') &raquo;
+  script.
+    $(function(){
+        //del news
+        $(".link-del").click(function(){
+            var me = $(this);
+            $.confirm({
+                msg:"您真的要删除吗？",
+                callBack:function(){
+                    $.messages({ msg: '删除成功！', Type: 'success'});
+                }
+            });
+        });
+
+        //send news
+        $(".link-send").click(function(){
+            var me = $(this);
+            $.confirm({
+                msg:"你真的要发布这条新闻吗？",
+                callBack:function(){
+                    $.messages({ msg: '发布成功！', Type: 'success'});
+                }
+            });
+        });
+
+        //cancel send news
+        $(".link-nusend").click(function(){
+            var me = $(this);
+            $.confirm({
+                msg:"你真的要撤销这条新闻吗？",
+                callBack:function(){
+                    $.messages({ msg: '撤销成功！', Type: 'success'});
+                }
+            });
+        });
+    });

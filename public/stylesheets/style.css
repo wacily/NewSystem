@@ -12,7 +12,18 @@ body {
 	clear:both;
 }
 .pages{margin-top:8px;}
-.pageleft{width:49%; float:left;}
+.pageleft{
+	width:51%; 
+	float:left;
+}
+.pageleft > div{
+	height:400px;
+	border-radius: 4px;
+	background: url('/images/kaola.jpg');
+	background-size:cover;
+	-moz-background-size:cover;
+	-webkit-background-size:cover;
+}
 .pageright{width:49%; float:right;}
 .login-page{
 	background-color:#00cc66;
@@ -68,3 +79,27 @@ body {
 .inputRadio > input:not(:first-child){
   margin-left:20px;
 }
+.navbar-nav > li:not(:first-child){
+	margin-left:20px;
+}
+.navbar-nav > li > a{
+	font-size:14px;
+	font-weight:bold;
+}
+.datalist{margin-bottom: 0px;}
+.datalist thead th{text-align: center}
+.td-num,
+.td-date,
+.td-option{
+	text-align: center
+}
+.td-option > a{
+	display: inline-block;
+	width:70px;
+	text-align: left;
+}
+.news-title{padding-bottom: 10px;}
+
+.news-control{padding-top:20px; text-align: right}
+.news-control > input{width:120px;}
+.news-control > input:not(:first-child){margin-left:20px;}

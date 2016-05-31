@@ -1,0 +1,21 @@
+extends ../layout.jade
+
+block static
+  script(src='/lib/ueditor/ueditor.config.js', type='javascript', charset='utf-8')
+  script(src='/lib/ueditor/_examples/editor_api.js', type='javascript', charset='utf-8')
+  script(src='/lib/ueditor/lang/zh-cn/zh-cn.js', type='javascript', charset='utf-8')
+
+block content
+  div.container.pages
+    include head.jade
+
+    div.pages-body
+      div.news-title
+        input(type='text', class='form-control', placeholder='Input news title', id='txtNewsTitle')
+      div.news-content
+        script(id="editor", type="text/plain", style="width:1024px;height:500px;")
+      div.news-control
+        input(type='button', class='btn btn-primary', id='btnAddNews', value='Add News')
+        input(type='button', class='btn btn-success', id='btnEmpty', value='Empty')
+script.
+  var ue = UE.getEditor('editor');
