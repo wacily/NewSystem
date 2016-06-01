@@ -14,6 +14,7 @@ var mag_index = require('./routes/mag_index');  //manage index page
 var mag_register = require('./routes/mag_register');
 var mag_edit = require('./routes/mag_edit');
 var mag_setting = require('./routes/mag_setting');
+var userLogin = require('./routes/userLogin');
  
 var app = express();
 
@@ -29,7 +30,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+//app.use('/users', users);
+app.use('/users',userLogin);
 app.use('/detail',detail);
 app.use('/manage/login', login);
 app.use('/manage/index',mag_index);
@@ -57,6 +59,7 @@ app.use("/lib/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req,
         res.setHeader('Content-Type', 'application/json');
         res.redirect('/lib/ueditor/config.json')
     }}));
+app.use("/login",userLogin);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
