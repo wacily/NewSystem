@@ -103,3 +103,32 @@ body {
 .news-control{padding-top:20px; text-align: right}
 .news-control > input{width:120px;}
 .news-control > input:not(:first-child){margin-left:20px;}
+
+
+
+.detail-news-title-box{
+  border-bottom: 1px solid #666;
+  padding-bottom:6px;
+}
+.detail-news-title{
+  font-size:20px;
+  text-align: center;
+  padding:20px 0;
+}
+.detail-news-info{
+  text-align: center;
+}
+.detail-news-info > span:not(first-child){
+  margin-left:50px;
+}
+.detail-news-body-box{
+  padding:20px 0;
+  text-indent: 25px;
+  line-height: 25px;
+}
+.detail-news-foot-box{
+  padding:10px 0;
+  border-top:1px solid #666;
+}
+.detail-news-foot-box > a:first-child{float:left;}
+.detail-news-foot-box > a:last-child{float:right;}

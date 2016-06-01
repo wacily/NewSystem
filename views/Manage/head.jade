@@ -9,4 +9,41 @@ nav.navbar.navbar-default
         li
           a(href="/manage/register", class='navbar-brand') <span class='glyphicon glyphicon-user'></span> 用户注册
         li
-          a(href="/manage/setting", class='navbar-brand') <span class='glyphicon glyphicon-cog'></span> 用户设置
+          a(href="#modal-user-setting", class='navbar-brand', data-toggle='modal', data-target='#modal-user-setting') <span class='glyphicon glyphicon-cog'></span> 用户设置
+
+//User Setting
+div.modal.fade#modal-user-setting
+  div(class='modal-dialog', style='top:50%; margin-top:-210px; ')
+    div.modal-content
+      div.modal-header
+        button(type='button', class='close', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') &times;
+        h4.modal-title User Setting
+      div.modal-body
+        div.loginbox-body
+          table
+            tbody
+              tr
+                th NiceName:
+                td
+                  input(type='text',class='form-control', placeholder='Input your nice name')
+              tr
+                th Password:
+                td
+                  input(type='password',class='form-control', placeholder='Input your password')
+              tr
+                th Birthday:
+                td
+                  input(type='text',class='form-control', placeholder='Input your birthday')
+              tr
+                th Phone:
+                td
+                  input(type='text',class='form-control', placeholder='Input your phone num')
+              tr
+                th E-mail:
+                td
+                  input(type='text',class='form-control', placeholder='Input your e-mail')
+
+      div.modal-footer
+        button(type='button', class='btn btn-default' data-dismiss='modal') 取消
+        button(type='button', class='btn btn-primary') 保存
