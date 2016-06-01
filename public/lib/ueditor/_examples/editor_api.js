@@ -90,6 +90,7 @@
             'plugins/simpleupload.js',
             'plugins/serverparam.js',
             'plugins/insertfile.js',
+            'plugins/xssFilter.js',
             'ui/ui.js',
             'ui/uiutils.js',
             'ui/uibase.js',
@@ -120,12 +121,9 @@
             'adapter/editor.js',
             'adapter/message.js',
             'adapter/autosave.js'
-
         ],
-        var baseURL = '/lib/ueditor/_src/';
-    //for (var i=0,pi;pi = paths[i++];) {
-    for (var i=0,i<paths.length;i++) {
-        document.write('<script type="text/javascript" src="'+ baseURL + paths[i] +'"></script>');
-        console.log(baseURL + paths[i]);
+        baseURL = '/lib/ueditor/_src/';
+    for (var i=0,pi;pi = paths[i++];) {
+        document.write('<script type="text/javascript" src="'+ baseURL + pi +'"></script>');
     }
 })();
