@@ -9,12 +9,12 @@ var ueditor=require('ueditor');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var detail = require('./routes/detail');
-var login = require('./routes/login');  //user login page
+var mag_login = require('./routes/login');  //user login page
 var mag_index = require('./routes/mag_index');  //manage index page
 var mag_register = require('./routes/mag_register');
 var mag_edit = require('./routes/mag_edit');
 var mag_setting = require('./routes/mag_setting');
-var userLogin = require('./routes/userLogin');
+var api_users_login = require('./routes/api_users_login');
  
 var app = express();
 
@@ -31,9 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 //app.use('/users', users);
-app.use('/users',userLogin);
+app.use('/users',users);
 app.use('/detail',detail);
-app.use('/manage/login', login);
+app.use('/manage/login', mag_login);
 app.use('/manage/index',mag_index);
 app.use('/manage/register',mag_register);
 app.use('/manage/edit',mag_edit);
@@ -59,7 +59,7 @@ app.use("/lib/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req,
         res.setHeader('Content-Type', 'application/json');
         res.redirect('/lib/ueditor/config.json')
     }}));
-app.use("/login",userLogin);
+app.use("/api/users/login",api_users_login);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
