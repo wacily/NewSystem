@@ -32,20 +32,16 @@
             callBack: function () { }
         };
 
-        var cliclEvent={
-            cancel:function(){$('.mage_modal').remove();},
-            submit:defaults.callBack
-        }
-
         $.extend(defaults, {}, options);
 
         var box_html = "<div class='mage_modal'>"+
-                            "<div class='mage_msg_box'>"+
+                            "<div class='mage_modal_bg'></div>"+
+							"<div class='mage_msg_box'>"+
                                 "<div class='mage_box_title'>" + defaults.title + "</div>" +
                                 "<div class='mage_box_content'>" + defaults.msg + "</div>"+
                                 "<div class='mage_box_options'>"+
-                                    "<a class='mage_box_option_submit' href=\"javascript:$('.mage_modal').remove();\">确定</a>" +
-                                    "<a class='mage_box_option_cancel' href=\"javascript:$('.mage_modal').remove();\">取消</a>" +
+                                    "<a class='mage_box_option_submit' onclick=\"$('.mage_modal').remove();\">确定</a>" +
+                                    "<a class='mage_box_option_cancel' onclick=\"$('.mage_modal').remove();\">取消</a>" +
                                " </div>"+
                             "</div>"+
                         "</div>";

@@ -11,6 +11,14 @@ body {
 	display: block;
 	clear:both;
 }
+label.error{
+  margin-top:5px;
+  color:red;
+  background-image: url('/images/error_16.png');
+  background-repeat: no-repeat; 
+  background-position: left center;
+  padding-left:20px;
+}
 .pages{margin-top:8px;}
 .pageleft{
 	width:51%; 
@@ -36,8 +44,18 @@ body {
 }
 .loginbox-body table{width:100%;}
 .loginbox-body table tr{height:50px;}
-.loginbox-body table tbody tr th{text-align:right;padding-right:5px;}
-.loginbox-body table tbody tr td{text-align:left; padding-right:30px;}
+.loginbox-body table tbody tr th{
+  text-align:right;
+  padding-right:5px;
+  padding-top:8px;
+  vertical-align: top;
+}
+.loginbox-body table tbody tr td{
+  text-align:left; 
+  padding-right:30px;
+  padding-bottom:15px;
+  vertical-align: top;
+}
 .td-control{text-align:center !important; padding-top: 20px;}
 .td-control input{width:140px;}
 .td-control input:last-child{margin-left:20px;}
@@ -132,3 +150,54 @@ body {
 }
 .detail-news-foot-box > a:first-child{float:left;}
 .detail-news-foot-box > a:last-child{float:right;}
+.search-box{
+  margin-bottom:20px;
+}
+.search-box-title{
+  padding:12px 20px;
+  font-weight: bold;
+  color:#fff;
+  border-color: #2e6da4;
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  background-color: #286090;
+}
+.search-box-body{
+  border-left:1px solid #2e6da4;
+  border-right:1px solid #2e6da4;
+  border-bottom:1px solid #2e6da4;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius:4px;
+}
+.search-box-control > input,
+.search-box-control > span{
+  float:left;
+}
+.search-box-control > input:first-child{
+  width:300px;
+}
+.search-box-control > input:last-child{
+  margin-left:15px;
+}
+.search-box-control > input[type='checkbox']{
+  margin-left:15px;
+  margin-right:6px;
+}
+.search-box-control > input[type='checkbox'],
+.search-box-control > span{
+  position: relative;
+  top:8px;
+}
+.search-table table{width:100%;}
+.search-table table tr{height:50px;}
+.search-table table tbody th{
+  width:120px;
+  text-align: right;
+}
+.search-table table tbody td{
+  text-align: left;
+  padding-left:10px;
+}
+.txt-error{
+  color:#d44950;
+}

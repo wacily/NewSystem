@@ -1,0 +1,80 @@
+extends ../layout.jade
+
+block static
+  script(src='/javascripts/Manage/search.js')
+
+block content
+  div.container.pages
+    include head.jade
+
+    div.pages-body
+      div.search-box.search-table
+        div.search-box-title IP地址归属地查询:
+        div.search-box-body
+          table
+            tbody
+              tr
+                th IP地址：
+                td
+                  div.search-box-control
+                    input(type='text', class='form-control', id='txtIp', value='8.8.8.8')
+                    input(type='button', value='立即查询', class='btn btn-primary', id='btnIp')
+              tr
+                th 查询结果：
+                td.tdIp
+      div.search-box.search-table
+        div.search-box-title 身份证号码归属地查询：
+        div.search-box-body
+          table
+            tbody
+              tr
+                th 身份证号码：
+                td
+                  div.search-box-control
+                    input(type='text', class='form-control', id='txtCardNo', value='612321198310102337')
+                    input(type='button', value='立即查询', class='btn btn-primary', id='btnCardNo')
+              tr
+                th 查询结果：
+                td.tdCardNo
+      div.search-box.search-table
+        div.search-box-title 手机号码归属地查询：
+        div.search-box-body
+          table
+            tbody
+              tr
+                th 手机号码：
+                td
+                  div.search-box-control
+                    input(type='text', class='form-control', id='txtPhone', value='13669160496')
+                    input(type='button', value='立即查询', class='btn btn-primary', id='btnPhone')
+              tr
+                th 查询结果：
+                td.tdPhone
+      div.search-box.search-table
+        div.search-box-title 标准北京时间：
+        div.search-box-body
+          table
+            tbody
+              tr                
+                td(colspan='2' style='padding-left:50px;')
+                  input(type='button', value='获取时间', class='btn btn-primary', id='btnTime')
+              tr
+                th 查询结果：
+                td.tdTime
+      div.search-box.search-table
+        div.search-box-title 汉字拼音互转：
+        div.search-box-body
+          table
+            tbody
+              tr
+                th 待转文本：
+                td
+                  div.search-box-control
+                    input(type='text', class='form-control', id='txtText', value='待转文本')
+                    
+                    input(type='checkbox', value='0', id="rbtnText")
+                    span 拼音转汉字
+                    input(type='button', value='开始转换', class='btn btn-primary', id='btnText')
+              tr
+                th 转换结果：
+                td.tdText

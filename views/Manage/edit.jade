@@ -22,3 +22,47 @@ block content
         input(type='button', class='btn btn-success', id='btnEmpty', value='Empty')
   script.
     var ue = UE.getEditor('editor');
+
+    $(function(){
+      // add news
+      $("#btnAddNews").click(function(){
+        var title = $("#txtNewsTitle").val();
+        var Text = ue.getContentTxt();
+        var Content = ue.getContent();
+
+        if(!title){
+          $.messages({msg:"News title not null",type:"error"});
+          return;
+        }
+
+        if(!Text){
+          $.messages({msg:"News content not null",type:"error"});
+          return;
+        }
+
+        $.ajax({
+          url:"/api/news/add",
+          data:{
+            title:title,
+            content:Content
+          },
+          type:"POST",
+          dataType:"JSON",
+          success:function(data){
+            if(!data){
+              $.messages({msg:"Server not response data!",type:"error"});
+              return;
+            }
+            if(data.status == 1){
+              $.messages({msg:"News send success!",type:"success"});
+            }else{
+              $.messages({msg:data.msg,type:"error"});
+            }
+          },
+          error:function(){
+            $.messages({msg:"Sorry, Server error!",type:"error"});
+          }
+        });
+
+      });
+    });

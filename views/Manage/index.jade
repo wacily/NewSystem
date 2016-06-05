@@ -13,28 +13,20 @@ block content
             th(style='width:120px;') 发布日期
             th(style='width:260px;') 操作
         tbody
-          tr
-            td.td-num 1
-            td.td-title dfsfdgfdfgdf
-            td.td-date 2015-05-25
-            td.td-option
-              a(href="#")
-                <span class='glyphicon glyphicon-edit'></span> 编辑
-              a(href="#", class='link-del')
-                <span class='glyphicon glyphicon-remove'></span> 删除
-              a(href="#", class='link-nusend', title='点击取消发布')
-                <span class='glyphicon glyphicon-check'></span> 已发布
-          tr
-            td.td-num 2
-            td.td-title dfsfdgfdfgdf
-            td.td-date 2015-05-25
-            td.td-option
-              a(href="#")
-                <span class='glyphicon glyphicon-edit'></span> 编辑
-              a(href="#", class='link-del')
-                <span class='glyphicon glyphicon-remove'></span> 删除
-              a(href="#", class='link-nusend', title='点击取消发布')
-                <span class='glyphicon glyphicon-check'></span> 已发布
+          - if(typeof data.news == 'object')
+            - for(var i = 0; i < data.news.length; i++)
+                tr
+                  td.td-num #{i+1}
+                  td.td-title #{data.news[i].title}
+                  td.td-date #{data.news[i].createDate}
+                  td.td-option
+                    a(href="#")
+                      <span class='glyphicon glyphicon-edit'></span> 编辑
+                    a(href="#", class='link-del')
+                      <span class='glyphicon glyphicon-remove'></span> 删除
+                    a(href="#", class='link-nusend', title='点击取消发布')
+                      <span class='glyphicon glyphicon-check'></span> 已发布
+          
           tr
             td.td-num 3
             td.td-title dfsfdgfdfgdf

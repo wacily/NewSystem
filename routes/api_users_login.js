@@ -39,7 +39,12 @@ router.get('/', function(req, res) {
         if(num != 1){
             Result.status = 0;
             Result.msg = 'login failed';
+        }else{
+            req.session.user = userName;
         }
+
+        console.log(req.session.user);
+        
         res.json(Result);
     }); 
     //关闭connection
@@ -69,7 +74,10 @@ router.post('/', function(req, res) {
         if(num != 1){
             Result.status = 0;
             Result.msg = 'login failed';
+        }else{
+            req.session.user = userName;
         }
+
         res.json(Result);
     }); 
     //关闭connection
